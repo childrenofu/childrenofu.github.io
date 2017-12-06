@@ -1,0 +1,240 @@
+---
+image: img/home.jpg
+---
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  {% seo %}
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/tachyons.min.css">
+</head>
+<body class="sans-serif">
+  <header class="cover bg-left bg-center-l" style="background-image: url(img/home.jpg)">
+    <div class="bg-black-60 pb5 pb6-m pb7-l">
+      <nav class="dt w-100 mw8 center">
+        <h1 class="dtc v-mid pa3">
+          <a href="/" class="dib pa1 border-box link white-90 hover-white f4 fw6 ttu">
+            {{ site.title }}
+          </a>
+        </h1>
+        <ul class="dtc v-mid tr pa3 list">
+          <li class="dn dib-l pv2 ph3">
+            <a class="f5 fw4 hover-white no-underline white-70" href="#about">
+              Sobre
+            </a>
+          </li>
+          <li class="dn dib-l pv2 ph3">
+            <a class="f5 fw4 hover-white no-underline white-70" href="#mission">
+              Missão
+            </a>
+          </li>
+          <li class="dn dib-l pv2 ph3">
+            <a class="f5 fw4 hover-white no-underline white-70" href="#team">
+              Equipa
+            </a>
+          </li>
+          <li class="dn dib-l pv2 ph3">
+            <a class="f5 fw4 hover-white no-underline white-70" href="#contact">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="tc-l mt4 mt5-m mt6-l ph3">
+        <h1 class="f2 f1-l  white-90 mb0 lh-title">
+          Juntos não há missões impossíveis
+        </h1>
+        <h2 class="fw1 f3 white-80 mt3 mb4">
+          {{ site.description }}
+        </h2>
+
+        <a class="link bg-transparent grow inline-flex items-center tc pa2 bg-blue white" href="https://facebook.com" title="Facebook">
+          <svg class="dib h2 w2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero"/></svg>
+          <span class="f6 ml3 pr2">Siga-nos no facebook</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="bg-near-black near-white">
+    <div class="center mw8 pa4">
+      <blockquote class="ml0 mt0 mb4 pl4 tc">
+        <h2 class="f5 f4-m f3-l fw2 lh-copy mt0">
+          Nunca deveis dizer: "Isso não é comigo!"
+        </h2>
+        <footer class="fs-normal f7">
+          <p class="f6 ttu tracked fs-normal mb0">Beato José Allamano</p>
+          fundador dos
+          <a href="http://www.consolata.pt/" target="_blank" class="link dim white b">
+            Missionários da Consolata
+          </a>
+        </footer>
+      </blockquote>
+
+      <aside class="aspect-ratio aspect-ratio--16x9 mb4">
+        <iframe class="aspect-ratio--object cover" src="https://www.youtube.com/embed/IVccUiLUXrM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </aside>
+      <footer class="tc f7">
+        Video produzido e realizado por <em>Alfredo Gomes</em>
+      </footer>
+    </div>
+  </section>
+
+  <section id="mission" >
+    <div class="mw8 center mv4">
+      <article id="testimonials" class="cf">
+        <h3 class="f4 f3-l fw2 tc">
+          O que as pessoas disseram desta missão
+        </h3>
+
+        {% for testimonial in site.data.testimonials %}
+          <blockquote class="mh0 fl w-third cf">
+            <div class="fl w-20 pv3">
+              <img src="{{ testimonial.author.photo }}" alt="{{ testimonial.author.name }}" class="br-100 ba b--black-10">
+            </div>
+            <div class="ph3 f5 lh-copy fl w-80">
+              {{ testimonial.content | markdownify }}
+
+              <footer class="f6 mt3 b">
+                {{ testimonial.author.name }}
+                <small class="db mt0 pt0 normal f7 mid-gray">{{ testimonial.author.role }}</small>
+              </footer>
+            </div>
+          </blockquote>
+        {% endfor %}
+      </article>
+    </div>
+  </section>
+
+  <hr class="mw4 center">
+
+  <section id="press" class="pv4 ph3">
+    <article id="press" class="mw8 center">
+      <h3 class="f4 f3-l fw2">
+        {{ site.data.fatima_missionaria.title }}
+      </h3>
+      <div class="f5 lh-copy" >
+        {{ site.data.fatima_missionaria.article | markdownify }}
+      </div>
+      <footer class="f6 tr mid-gray">
+        em <em>{{ site.data.fatima_missionaria.source }}</em>
+      </footer>
+    </article>
+  </section>
+
+  <section id="team" class="bg-near-white">
+    <header class="cover bg-left bg-center-l" style="background-image: url(img/team.jpg)">
+      <div class="bg-black-60">
+        <h2 class="mw8 center f3 f2-l fw2 white-90 mb0 lh-title pv6 ph3">
+          Já conhece a nossa equipa?
+        </h2>
+      </div>
+    </header>
+
+    <ul class="list pl0 mw8 center cf pv4">
+      {% for member in site.data.team %}
+        <li class="fl w-third w-20-l pa2">
+          <div class="aspect-ratio aspect-ratio--4x3 bt bl br b--black-10">
+            <div style="background-image:url({{ member.photo }});"
+                 class="db bg-center cover aspect-ratio--object"></div>
+          </div>
+          <p class="bg-white mt0 tc f6 lh-title pa3 mb0 ba b--black-10">
+            {{ member.name }}
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="contact" class="mw8 center pv4 ph3">
+    <h2 class="fw2 f3 f2-l lh-title">
+      Entre em contacto connosco
+    </h2>
+    <p class="f5 measure lh-copy">
+      A sua opinião é importante para o sucesso de futuras missões. Entre em
+      contacto connosco, através do nosso email e/ou facebook:
+    </p>
+    <form>
+      <fieldset id="contact" class="ba b--transparent ph0 mh0">
+        <div class="mt3">
+          <label class="db lh-copy f6 pv2" for="name">Nome:</label>
+          <input class="pa2 input-reset ba b--black-20 bg-transparent w-100" type="text" name="name" id="email">
+        </div>
+        <div class="mv3">
+          <label class="db lh-copy f6 pv2" for="email-address">Endereço de email:</label>
+          <input class="pa2 input-reset ba b--black-20 bg-transparent w-100" type="email" name="email-address" id="email-address">
+        </div>
+        <div class="mv3">
+          <label class="db lh-copy f6 pv2" for="message">Mensagem:</label>
+          <textarea class="pa2 input-reset ba b--black-20 bg-transparent w-100" name="message" id="message" rows="10"></textarea>
+        </div>
+      </fieldset>
+      <div class="">
+        <input class="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Contactar">
+      </div>
+    </form>
+  </section>
+
+  <hr class="mw4 center">
+
+  <section id="sponsors" class="pv4 ph3">
+    <h2 class="fw2 f5 f4-l lh-title mw8 center tc">
+      Esta missão teve o apoio e o suporte de:
+    </h2>
+
+    <ul class="mw8 center list pl0 cf">
+      {% for sponsor in site.data.sponsors %}
+      <li class="fl w4 pa2">
+        <a href="{{ sponsor.url }}" target="_blank" class="link dim">
+          <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="ba b--black-20 br1">
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <footer id="footer" class="bg-near-black near-white">
+    <div class="cf mw8 center pv4 ph3 ph0-ns">
+      <a href="http://www.consolata.pt/" target="_blank" class="db fl w-25-ns w-100 link dim ph2">
+        <img src="img/consolata.png" alt="Consolata">
+      </a>
+      <section class="fl w-25-ns w-100 ph2">
+        <h3 class="f6 fw6 tracked ttu lh-title">Mapa do site</h3>
+      </section>
+      <section class="fl w-25-ns w-100 ph2">
+        <h3 class="f6 fw6 tracked ttu lh-title">Ligações externas</h3>
+        <ul class="list pl0">
+          {% for link in site.data.links %}
+          <li class="mv2">
+            <a href="{{ link.url }}" target="_blank" class="f7 link dim near-white">
+              {{ link.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+      <section class="fl w-25-ns w-100 ph2">
+        <h3 class="f6 fw6 tracked ttu lh-title">Contacto</h3>
+        <ul class="list pl0">
+          <li class="mv2">
+            <a href="mailto:{{ site.email }}" class="link dim near-white f7">
+              {{ site.email }}
+            </a>
+          </li>
+          <li class="mv2">
+            <a href="tel:{{ site.phone }}" class="link dim near-white f7">
+              {{ site.phone }}
+            </a>
+          </li>
+          <li class="mv2">
+            <a href="http://www.{{ site.facebook }}" class="link dim near-white f7">
+              {{ site.facebook }}
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </footer>
+</body>
+</html>

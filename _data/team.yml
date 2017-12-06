@@ -1,0 +1,61 @@
+ - name:  Afonso Silva
+   id:    afonso-silva
+   photo: img/team/afonso-silva.jpg
+   role:  Estudante de Engenharia Informática na Universidade do Minho
+
+ - name:  Alfredo Gomes
+   id:    alfredo-gomes
+   photo: img/team/alfredo-gomes.jpg
+   role:  Estudante de Engenharia Informática na Universidade do  Minho
+
+ - name:  Ana Marujo
+   id:    ana-marujo
+   photo: img/team/ana-marujo.jpg
+
+ - name:  António Santos
+   id:    antonio-santos
+   photo: img/team/antonio-santos.jpg
+
+ - name:  Catarina Magalhães
+   id:    catarina-magalhaes
+   photo: img/team/catarina-magalhaes.jpg
+
+ - name:  Catarina Teixeira
+   id:    catarina-teixeira
+   photo: img/team/catarina-teixeira.jpg
+
+ - name:  Filipa Couto
+   id:    filipa-couto
+   photo: img/team/filipa-couto.jpg
+
+ - name:  Juliana Garlet
+   id:    juliana-garlet
+   photo: img/team/juliana-garlet.jpg
+   role:  Estudante de Enfermagem no Instituto Politécnico de Bragança
+
+ - name:  Maria Luís Fernandes
+   id:    maria-luis-fernandes
+   photo: img/team/maria-luis-fernandes.jpg
+   role:  Estudante de Gestão na Faculdade de Economia do Porto
+
+ - name:  Noémia Dias Silva
+   id:    noemia-dias-silva
+   photo: img/team/noemia-dias-silva.jpg
+
+ - name:  Patrícia Quaresma
+   id:    patricia-quaresma
+   photo: img/team/patricia-quaresma.jpg
+
+ - name:  Rute Ferreira
+   id:    rute-ferreira
+   photo: img/team/rute-ferreira.jpg
+   role:  Estudante de Direito na Universidade do Minho
+
+ - name:  Samuel Rocha
+   id:    samuel-rocha
+   photo: img/team/samuel-rocha.jpg
+   role:  Estudante de Medicina na Universidade da Beira Interior
+
+ - name:  Padre Thomas Mushi
+   id:    padre-thomas-mushi
+   photo: img/team/padre-thomas-mushi.jpg

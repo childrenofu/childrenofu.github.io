@@ -1,0 +1,15 @@
+title: "Children Of U"
+description: "Voluntariado Missionário no Uganda - 2017"
+lang: "pt"
+baseurl: ""
+url: ""
+author: "Afonso Silva"
+email: "vm.uganda2017@gmail.com"
+facebook: "facebook.com/childrenofU/"
+github_username: "childrenofu"
+phone: "+351 911 957 870"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
